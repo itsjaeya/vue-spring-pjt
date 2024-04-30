@@ -23,3 +23,9 @@ jobs:
 
         - name: Build Jar
           run: ./gradlew build bootJar
+
+        # install docker buildx to runner(ubuntu)
+        - name: Docker buildx
+          uses: docker/setup-buildx-action@v2
+          
+        # build docker image to push 
