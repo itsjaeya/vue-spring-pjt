@@ -27,5 +27,9 @@ jobs:
         # install docker buildx to runner(ubuntu)
         - name: Docker buildx
           uses: docker/setup-buildx-action@v2
-          
-        # build docker image to push 
+
+        # docker login
+        - name: Docker Login
+          uses: docker/login-action@v2
+
+        # build docker image to push docker hub
